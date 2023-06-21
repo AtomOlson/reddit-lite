@@ -1,0 +1,44 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 5px 5px #131313;
+  background-color: #1B1B1B;
+  justify-content: space-between;
+}
+
+/* Logo */
+
+.headerLogo {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1.1rem;
+  padding-left: 0.5rem;
+}
+
+.headerLogo > * {
+  margin: 0 5px;
+}
+
+.headerLogoImg {
+  height: 70%;
+  width: auto;
+}
+
+/* Utilities */
+
+.headerUtilities {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 35%;
+  height: 100%;
+  justify-content: right;
+  align-items: center;
+}

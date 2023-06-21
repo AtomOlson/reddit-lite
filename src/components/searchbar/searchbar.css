@@ -1,0 +1,33 @@
+.searchOutline {
+  background-color: #252525;
+  border: 1px solid #525252;
+  border-radius: 1.5rem / 50%;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  margin-right: 1rem;
+}
+
+.searchBar {
+  width: 85%;
+  /* height: 80%; */
+  font-size: 1.3rem;
+  margin: 10px;
+  border: none;
+  outline-style: none;
+  color: #525252;
+  background-color: transparent;
+}
+
+.search_active {
+  border-color: #D4D4D4;
+  color: #D4D4D4;
+}
+
+.search_inactive.searchIcon {
+  filter: brightness(0.5);
+}
+
+.search_active.searchIcon {
+  filter: brightness(1);
+}

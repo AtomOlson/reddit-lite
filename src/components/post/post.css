@@ -1,0 +1,78 @@
+.post {
+  /* width - padding */
+  width: calc(100% - 0.5rem); 
+  border: 1px solid #525252;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px #131313;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  display: flex;
+  padding: 0.5rem;
+}
+
+/* Post Main */
+
+.postMain {
+  width: 90%;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.postImg, .postVideo {
+  width: 100%;
+  min-width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.postText {
+  width: 100%;
+  font-weight: 300;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+}
+
+.postSubreddit {
+  display: inline;
+}
+
+.postAuthor {
+  display: inline;
+  font-weight: 100;
+}
+
+.postTitle {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Post votes */
+.postVote {
+  margin-right: 0.5rem;
+}
+
+.postVoteIcon {
+  width: 1.5rem;
+}
+
+/* Post comment icon */
+.postComments {
+  position: relative;
+  text-align: center;
+  float: right;
+}
+
+.postCommentIcon {
+  width: 2.5rem;
+}
+
+.postCommentNum {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  font-weight: 100;
+}
+
+
+
