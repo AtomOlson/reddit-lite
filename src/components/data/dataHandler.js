@@ -2,47 +2,54 @@ import React, { useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { loadUrl } from "../../app/api";
 import { useDispatch, useSelector } from "react-redux";
-import { getPosts, setPosts } from "./dataSlice";
+import { getPosts, loadData, setComments, setOpenPost, setPosts } from "./dataSlice";
 import { getFilters } from "../filter/filterSlice";
 
 export default function DataHandler() {
   const location = useLocation();
   const dispatch = useDispatch();
 
-  const filters = [ 'best', 'hot', 'new', 'top', 'rising' ];
+ 
 
   let { filter, subreddit, id, title } = useParams();
+  
+  // useEffect(() => {
+  //   const filters = [ 'best', 'hot', 'new', 'top', 'rising' ];
+  //   const fetchData = async() => {
+  //     const data = await loadData(location.pathname);
 
-  useEffect(() => {
-    const fetchData = async() => {
-      const data = await loadUrl(`https://www.reddit.com${location.pathname}.json`);
+  //     console.log(data)
 
-      if(location.pathname === '/'  || filters.includes(filter)) { // Gets the data for plain posts
-        handlePosts(data.data)
-      } else if(false) {
+  //     // console.log(location.pathname);
+  //     // console.log(`/r/${subreddit}/comments/${id}/${title}/`);
 
-      }
-      function handlePosts(data) {
-        dispatch(setPosts(data.children))
-        console.log(data.children)
-      }
+  //     if(location.pathname === '/'  || filters.includes(filter)) { // Gets the data for plain posts
+  //       dispatch(setPosts(data.data.children))
+  //     } else if(location.pathname === `/r/${subreddit}/comments/${id}/${title}/`) { // Gets data for open post
+  //       dispatch(setOpenPost(data[0].data.children[0].data));
+  //       dispatch(setComments(data[1].data.children));
+  //     }
+  //   } 
 
-      function handleOpenPost(data) {
-
-      }
-
-      function handleSubreddit(data) {
-
-      }
-
-      function handleUser(data) {
-
-      }
-    } 
-
+  //   fetchData();
     
-    fetchData();
-  }, [location])
+  // }, [location, filter, subreddit, id, title, dispatch])
+
+  // useEffect(() => {
+  //   const filters = [ 'best', 'hot', 'new', 'top', 'rising' ];
+  //   dispatch(loadData(location.pathname));
+
+  //   // console.log(location.pathname);
+  //   // console.log(`/r/${subreddit}/comments/${id}/${title}/`);
+
+  //   if(location.pathname === '/'  || filters.includes(filter)) { // Gets the data for plain posts
+  //     dispatch(setPosts(data.data.children))
+  //   } else if(location.pathname === `/r/${subreddit}/comments/${id}/${title}/`) { // Gets data for open post
+  //     dispatch(setOpenPost(data[0].data.children[0].data));
+  //     dispatch(setComments(data[1].data.children));
+  //   }
+    
+  // }, [location, filter, subreddit, id, title, dispatch])
 
   
 

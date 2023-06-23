@@ -10,6 +10,10 @@
   padding: 0.5rem;
 }
 
+.post:hover {
+  border-color: #D4D4D4;
+}
+
 /* Post Main */
 
 .postMain {

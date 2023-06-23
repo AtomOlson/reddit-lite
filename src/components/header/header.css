@@ -21,6 +21,8 @@ header {
   align-items: center;
   font-size: 1.1rem;
   padding-left: 0.5rem;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .headerLogo > * {
