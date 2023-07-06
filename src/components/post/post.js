@@ -5,7 +5,7 @@ import downvoteIcon from '../../assets/downvote-icon.png';
 import commentIcon from '../../assets/comment-icon.png';
 import { Link } from "react-router-dom";
 
-export default function Post(data) {
+export default function Post({data, open}) {
   const {
     subreddit,
     author, 
@@ -19,14 +19,14 @@ export default function Post(data) {
     num_comments,
     selftext, // Post text
     permalink // Link to full post
-  } = data.data;
+  } = data;
 
 
   // Gets media for specific types
   function media() {
     if(is_video) { // Video
 
-      const { fallback_url } = data.data.secure_media.reddit_video;
+      const { fallback_url } = data.secure_media.reddit_video;
 
       return (
         <video src={fallback_url} 
@@ -83,13 +83,13 @@ export default function Post(data) {
   }
 
   return (
-    <div className="post">
+    <div className={open ? 'openPost' : 'post'} >
       <div className="postVote">
         <img className="postVoteIcon" src={upvoteIcon} alt="" />
         <p>{roundAmount(ups - downs)}</p>
         <img className="postVoteIcon" src={downvoteIcon} alt="" />
       </div>
-      <Link to={getLink()}
+      <Link to={open ? url_overridden_by_dest : getLink()}
             className="postMain" >
         {subreddit ? <p className="postSubreddit">r/{subreddit} </p> : ''}
         <p className="postAuthor">- Posted by u/{author} {getTime()}</p>

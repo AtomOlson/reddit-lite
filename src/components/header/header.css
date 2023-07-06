@@ -9,6 +9,7 @@ header {
   box-shadow: 0 5px 5px #131313;
   background-color: #1B1B1B;
   justify-content: space-between;
+  z-index: 9;
 }
 
 /* Logo */

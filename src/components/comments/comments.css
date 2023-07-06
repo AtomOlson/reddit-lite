@@ -1,0 +1,66 @@
+.commentSection {
+  /* width - padding */
+  width: calc(100% - 0.5rem); 
+  border: 1px solid #525252;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px #131313;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.comment {
+  height: fit-content;
+  margin-bottom: 0.5rem;
+}
+
+/* Head */
+
+.commentHead {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.commentUserIcon {
+  width: 2rem;
+  display: inline;
+  border-radius: 50%;
+}
+
+.commentAuthor {
+  display: inline;
+  font-weight: 200;
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+}
+
+/* Data */
+
+.commentData {
+  display: flex;
+  flex-wrap: nowrap;
+  height: max-content;
+}
+
+.commentText {
+  margin-left: 0.25rem;
+  margin-bottom: 0.25rem;
+  word-break: break-all;
+}
+
+.commentBody {
+  height: fit-content;
+  width: 100%;
+}
+
+/* Line */
+
+.commentLine  {
+  border-right: 2px solid #525252;
+  height: auto;
+  width: 1rem;
+  margin-right: 1rem;
+  /* flex: 1; */
+}

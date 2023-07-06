@@ -6,3 +6,5 @@
 @import url(../src/components/filter/filter.css);
 @import url(../src/components/postHandler/postHandler.css);
 @import url(../src/components/post/post.css);
+@import url(../src/components/openPost/openPost.css);
+@import url(../src/components/comments/comments.css);
